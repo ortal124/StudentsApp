@@ -5,6 +5,6 @@ import kotlinx.parcelize.Parcelize
 data class Student(
     val name: String,
     val id: String,
-    val isChecked: Boolean,
+    var isChecked: Boolean,
     val imageResId: Int
 ) : Parcelable
