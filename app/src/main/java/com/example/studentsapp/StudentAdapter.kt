@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class StudentAdapter(private val studentList: MutableList<Student>, private val onItemClick: (Student) -> Unit) :
+class StudentAdapter(private val studentList: List<Student>, private val onItemClick: (Student) -> Unit) :
     RecyclerView.Adapter<StudentAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
