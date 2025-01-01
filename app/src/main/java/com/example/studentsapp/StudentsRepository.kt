@@ -1,5 +1,7 @@
 package com.example.studentsapp
 
+import Student
+
 object StudentRepository {
     private val students = mutableListOf<Student>()
 

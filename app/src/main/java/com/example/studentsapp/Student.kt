@@ -1,8 +1,10 @@
-package com.example.studentsapp
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Student(
-    var name: String,
-    var id: String,
-    var isChecked: Boolean,
-    val imageResId: Int // Static image resource ID
-)
+    val name: String,
+    val id: String,
+    val isChecked: Boolean,
+    val imageResId: Int
+) : Parcelable
