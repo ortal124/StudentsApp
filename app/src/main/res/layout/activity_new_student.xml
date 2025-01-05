@@ -116,10 +116,23 @@
             android:layout_marginEnd="8dp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/add_student_button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add_student" />
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/add_student_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_student" />
+
+        <Button
+            android:id="@+id/cancel_add_student_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel" />
+    </LinearLayout>
 
 </LinearLayout>

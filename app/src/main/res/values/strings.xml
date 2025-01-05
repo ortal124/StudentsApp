@@ -13,4 +13,5 @@
     <string name="enter_student_phone">Enter student phone</string>
     <string name="enter_student_address">Enter student address</string>
     <string name="is_checked_label">- Is Checked</string>
+    <string name="cancel">Cancel</string>
 </resources>
