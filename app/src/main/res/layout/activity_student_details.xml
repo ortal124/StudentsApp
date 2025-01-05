@@ -76,6 +76,14 @@
         android:textSize="18sp"
         android:layout_marginTop="8dp" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/is_checked"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
     <CheckBox
         android:id="@+id/check_status"
         android:layout_width="wrap_content"
