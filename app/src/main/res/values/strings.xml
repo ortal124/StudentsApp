@@ -12,4 +12,5 @@
     <string name="adress_field_label">Adress:</string>
     <string name="enter_student_phone">Enter student phone</string>
     <string name="enter_student_address">Enter student address</string>
+    <string name="is_checked_label">- Is Checked</string>
 </resources>
