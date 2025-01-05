@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class StudentsListActivity : ComponentActivity() {
 
@@ -18,7 +19,6 @@ class StudentsListActivity : ComponentActivity() {
         recyclerView = findViewById(R.id.students_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Sample static data
         val students = StudentRepository.getStudents()
 
         adapter = StudentAdapter(students) { student ->
@@ -28,5 +28,18 @@ class StudentsListActivity : ComponentActivity() {
         }
 
         recyclerView.adapter = adapter
+
+        val addButton: FloatingActionButton = findViewById(R.id.fab_add_student)
+
+        addButton.setOnClickListener {
+            val intent = Intent(this, NewStudentActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Refresh the data and notify the adapter
+        adapter.notifyDataSetChanged()
     }
 }
