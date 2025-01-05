@@ -12,19 +12,26 @@
         android:contentDescription="@string/student_image"
         android:src="@drawable/student_image" />
 
-    <TextView
-        android:id="@+id/student_name"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/student_name"
-        android:layout_marginStart="10dp" />
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp">
 
-    <TextView
-        android:id="@+id/student_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/student_id"
-        android:layout_marginStart="10dp" />
+        <TextView
+            android:id="@+id/student_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/student_name" />
+
+        <TextView
+            android:id="@+id/student_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/student_id"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
 
     <CheckBox
         android:id="@+id/check_status"

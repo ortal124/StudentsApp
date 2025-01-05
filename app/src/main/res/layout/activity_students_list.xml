@@ -18,7 +18,6 @@
             app:titleTextColor="@android:color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- RecyclerView for the list of students -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/students_recycler_view"
         android:layout_width="match_parent"
@@ -26,7 +25,6 @@
         android:layout_marginBottom="72dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <!-- Floating Action Button for adding a new student -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_student"
         android:layout_width="wrap_content"
