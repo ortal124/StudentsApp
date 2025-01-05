@@ -13,18 +13,71 @@
         android:src="@drawable/student_image" />
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_field_label"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <TextView
         android:id="@+id/student_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/student_name"
         android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/id_field_label"
+        android:textSize="16sp"
+        android:textStyle="bold"
         android:layout_marginTop="16dp" />
 
     <TextView
         android:id="@+id/student_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/student_id"
+        android:text=""
         android:textSize="18sp"
         android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_field_label"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/student_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/adress_field_label"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/student_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <CheckBox
+        android:id="@+id/check_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
