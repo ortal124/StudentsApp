@@ -15,4 +15,5 @@
     <string name="is_checked_label">- Is Checked</string>
     <string name="cancel">Cancel</string>
     <string name="is_checked">Is Checked:</string>
+    <string name="edit">Edit</string>
 </resources>

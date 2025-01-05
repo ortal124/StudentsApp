@@ -1,11 +1,14 @@
 package com.example.studentsapp
 
 import Student
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.ComponentActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class StudentDetailsActivity : ComponentActivity() {
 
@@ -28,5 +31,12 @@ class StudentDetailsActivity : ComponentActivity() {
         studentAddressView.text = student?.address
         studentCheckView.isChecked = student?.isChecked == true
         studentImageView.setImageResource(student?.imageResId ?: R.drawable.student_image)
+
+        val editButton: Button = findViewById(R.id.edit_student_button)
+
+        editButton.setOnClickListener {
+            val intent = Intent(this, EditStudentDetailsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
