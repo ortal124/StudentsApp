@@ -2,9 +2,11 @@ package com.example.studentsapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class StudentsListActivity : ComponentActivity() {
 
@@ -28,5 +30,12 @@ class StudentsListActivity : ComponentActivity() {
         }
 
         recyclerView.adapter = adapter
+
+        val addButton: FloatingActionButton = findViewById(R.id.fab_add_student)
+
+        addButton.setOnClickListener {
+            val intent = Intent(this, NewStudentActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
