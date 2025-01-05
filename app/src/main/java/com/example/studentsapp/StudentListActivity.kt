@@ -1,5 +1,6 @@
 package com.example.studentsapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -37,5 +38,11 @@ class StudentsListActivity : ComponentActivity() {
             val intent = Intent(this, NewStudentActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Refresh the data and notify the adapter
+        adapter.notifyDataSetChanged()
     }
 }
