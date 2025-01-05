@@ -1,9 +1,7 @@
 package com.example.studentsapp
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +19,6 @@ class StudentsListActivity : ComponentActivity() {
         recyclerView = findViewById(R.id.students_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Sample static data
         val students = StudentRepository.getStudents()
 
         adapter = StudentAdapter(students) { student ->
