@@ -25,6 +25,7 @@
         <!-- Other activities -->
         <activity android:name=".NewStudentActivity" />
         <activity android:name=".StudentDetailsActivity" />
+        <activity android:name=".EditStudentDetailsActivity" />
     </application>
 
 </manifest>
