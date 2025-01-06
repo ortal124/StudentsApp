@@ -16,4 +16,6 @@
     <string name="cancel">Cancel</string>
     <string name="is_checked">Is Checked:</string>
     <string name="edit">Edit</string>
+    <string name="save_button">Save</string>
+    <string name="delete_button">Delete</string>
 </resources>
