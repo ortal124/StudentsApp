@@ -20,7 +20,7 @@ object StudentRepository {
 
     fun deleteStudent(student: Student) {
         val index = students.indexOf(student)
-        if (index != -1) {
+        if (index in students.indices) { // Check if index is valid
             students.removeAt(index)
         }
     }

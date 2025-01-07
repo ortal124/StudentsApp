@@ -37,6 +37,7 @@ class StudentDetailsActivity : ComponentActivity() {
 
         editButton.setOnClickListener {
             val intent = Intent(this, EditStudentDetailsActivity::class.java)
+            intent.putExtra("STUDENT_KEY", student)
             startActivityForResult(intent, REQUEST_CODE)
         }
     }

@@ -7,8 +7,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.activity.ComponentActivity
 
 class EditStudentDetailsActivity : ComponentActivity() {
@@ -18,7 +16,6 @@ class EditStudentDetailsActivity : ComponentActivity() {
         setContentView(R.layout.activity_edit_student)
 
         val student = intent.getParcelableExtra<Student>("STUDENT_KEY")
-
 
         val studentNameInput: EditText = findViewById(R.id.student_name_input)
         val studentIdInput: EditText = findViewById(R.id.student_id_input)
@@ -50,7 +47,7 @@ class EditStudentDetailsActivity : ComponentActivity() {
         val deleteButton: Button = findViewById(R.id.delete_student_button)
 
         deleteButton.setOnClickListener {
-            //StudentRepository.deleteStudent(student!!)
+            StudentRepository.deleteStudent(student!!)
 
             // Signal that the student was deleted
             val resultIntent = Intent()
