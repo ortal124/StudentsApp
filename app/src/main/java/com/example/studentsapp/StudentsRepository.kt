@@ -11,11 +11,17 @@ object StudentRepository {
         students.add(student)
     }
 
-    fun updateStudent(position: Int, student: Student) {
-        students[position] = student
+    fun updateStudent(oldStudent: Student, updatedStudent: Student) {
+        val index = students.indexOf(oldStudent)
+        if (index != -1) {
+            students[index] = updatedStudent
+        }
     }
 
-    fun deleteStudent(position: Int) {
-        students.removeAt(position)
+    fun deleteStudent(student: Student) {
+        val index = students.indexOf(student)
+        if (index in students.indices) { // Check if index is valid
+            students.removeAt(index)
+        }
     }
 }
