@@ -23,6 +23,15 @@ class EditStudentDetailsActivity : ComponentActivity() {
         val studentAddressInput: EditText = findViewById(R.id.student_address_input)
         val checkBox: CheckBox = findViewById(R.id.check_status)
 
+        // Initialize the input fields with the current student data
+        student?.let {
+            studentNameInput.setText(it.name)
+            studentIdInput.setText(it.id)
+            studentPhoneInput.setText(it.phone)
+            studentAddressInput.setText(it.address)
+            checkBox.isChecked = it.isChecked
+        }
+
         val saveButton: Button = findViewById(R.id.save_student_button)
 
         saveButton.setOnClickListener {
