@@ -33,7 +33,11 @@ class EditStudentDetailsActivity : ComponentActivity() {
             val isChecked = checkBox.isChecked
             val updatedStudent = Student(name, id, phone, address, isChecked, R.drawable.student_image)
 
+
             StudentRepository.updateStudent(student!!, updatedStudent)
+            val resultIntent = Intent()
+            resultIntent.putExtra("updatedStudent", updatedStudent)
+            setResult(Activity.RESULT_OK, resultIntent)
 
             finish()
         }
