@@ -1,6 +1,8 @@
 package com.example.studentsapp
 
 import Student
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
@@ -48,7 +50,13 @@ class EditStudentDetailsActivity : ComponentActivity() {
         val deleteButton: Button = findViewById(R.id.delete_student_button)
 
         deleteButton.setOnClickListener {
-            StudentRepository.deleteStudent(student!!)
+            //StudentRepository.deleteStudent(student!!)
+
+            // Signal that the student was deleted
+            val resultIntent = Intent()
+            resultIntent.putExtra("isDeleted", true)
+            setResult(Activity.RESULT_OK, resultIntent)
+
             finish()
         }
     }
